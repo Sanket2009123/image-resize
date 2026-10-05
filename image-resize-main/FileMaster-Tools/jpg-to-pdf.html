@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JPG to PDF | FileMaster Tools</title>
+    <meta name="description" content="Convert multiple images into a downloadable PDF in your browser.">
+    <link rel="canonical" href="https://example.com/jpg-to-pdf.html">
+    <meta property="og:title" content="JPG to PDF">
+    <meta property="og:description" content="Convert multiple images into a downloadable PDF in your browser.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav"><a class="logo" href="index.html"><span>FM</span> FileMaster Tools</a>
+            <nav class="navlinks"><a href="index.html">Home</a><a href="image-tools.html">Image Tools</a><a
+                    href="pdf-tools.html">PDF Tools</a><a href="file-tools.html">File Tools</a><a
+                    href="converter-tools.html">Convert</a><a href="about.html">About</a></nav>
+            <div class="actions">
+                <div class="searchbox"><input id="toolSearch" class="iconbtn" placeholder="Search tools…"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
+                </div><button id="themeBtn" class="iconbtn" aria-label="Toggle theme">◐</button><button id="menuBtn"
+                    class="iconbtn menu" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="tool-page">
+            <div class="container tool-head"><span class="eyebrow">FileMaster Tools</span>
+                <h1>JPG to PDF</h1>
+                <p>Convert multiple images into a downloadable PDF in your browser.</p>
+            </div>
+            <div class="container workspace">
+                <div class="panel">
+                    <div class="upload" id="dropzone">📄 <h2>Drop images</h2><input id="imageInput" type="file"
+                            accept="image/*" multiple></div>
+                    <div id="list" class="file-list"></div>
+                    <div class="row">
+                        <div class="field"><label>Page size</label><select id="pagesize">
+                                <option value="a4">A4</option>
+                                <option value="letter">Letter</option>
+                                <option value="a4">Original-style A4</option>
+                            </select></div>
+                        <div class="field"><label>Orientation</label><select id="orientation">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select></div>
+                    </div>
+                    <div class="field"><label>Margin (mm)</label><input id="margin" type="number" value="10" min="0">
+                    </div><button class="btn primary" id="makePdf">Create PDF</button>
+                    <div class="notice">Uses jsPDF from a CDN. For fully offline use, download/vendor the library
+                        locally.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footergrid">
+            <div>
+                <div class="logo"><span>FM</span> FileMaster Tools</div>
+                <p>All Your File & Image Tools in One Place.</p>
+            </div>
+            <div><b>Tools</b><a href="image-tools.html">Image Tools</a><a href="pdf-tools.html">PDF Tools</a><a
+                    href="file-tools.html">File Tools</a><a href="converter-tools.html">Converters</a></div>
+            <div><b>Company</b><a href="about.html">About</a><a href="privacy.html">Privacy</a><a
+                    href="terms.html">Terms</a><a href="about.html#contact">Contact</a></div>
+            <div><b>Information</b><a href="about.html#how">How It Works</a><a href="privacy.html">Security</a><a
+                    href="index.html#faq">FAQ</a></div>
+        </div>
+        <div class="container center">
+            <p>© 2026 FileMaster Tools. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="toast" class="toast"></div>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/pdf-tools.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", initJpgPdf)</script>
+</body>
+
+</html>
